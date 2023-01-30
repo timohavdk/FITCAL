@@ -1,23 +1,60 @@
-import {defineComponent, ref, Ref, watch, defineEmits} from "vue";
+import {defineComponent, ref, Ref} from "vue";
 
 export default defineComponent({
 	name: "Input",
 	props: {
 		id: String,
 		label: String,
-		placeholder: Number
+		placeholder: Number,
+		mode: String,
 	},
-	setup(props) {
+	emits: ['setValue'],
+	setup(props, { emit }) {
+		/** Введённое значение */
 		const value: Ref<number> = ref(null);
 
-		const emit = defineEmits(['setValue']);
+		/** Сообщение об ошибке */
+		let message: Ref<string> = ref('');
 
-		watch(() => value, (newVal) => {
-			emit('setValue', newVal);
-		});
+		const ERROR_MESSAGE = 'Enter correct data';
+
+		/**
+		 * Обработчик отжатия клавиши
+		 * */
+		function keyUpHandler() {
+			emit('setValue', value);
+		}
+
+		/**
+		 * Обработчик blur
+		 * */
+		function blurHandler() {
+			if (null === value.value) {
+
+				return
+			}
+			console.log(props.mode);
+
+			if ('weight' === props.mode && 610 < value.value) {
+				message.value = ERROR_MESSAGE;
+
+				return;
+			}
+
+			if ('height' === props.mode && 272 < value.value) {
+				message.value = ERROR_MESSAGE;
+
+				return;
+			}
+
+			message.value = '';
+		}
 
 		return {
-			value
+			value,
+			message,
+			keyUpHandler,
+			blurHandler
 		}
 	}
 })

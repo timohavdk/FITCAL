@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 
-const store = createStore({
+const Store = createStore({
 	state() {
 		return {
 			height: 0,
@@ -26,7 +26,7 @@ const store = createStore({
 	}
 })
 
-export default store;
+export default Store;
 
 /** Мутация - установка роста */
 export const MUTATIONS_SET_HEIGHT = 'setHeight';

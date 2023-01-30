@@ -9,12 +9,14 @@
 				:id="'weight'"
 				:label="'Enter your weight'"
 				:placeholder="0"
+        :mode="'weight'"
 				@setValue="setWeight"
 			/>
 			<Input
 				:id="'height'"
 				:label="'Enter your height'"
 				:placeholder="0"
+        :mode="'height'"
 				@setValue="setHeight"
 			/>
 		</div>

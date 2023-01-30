@@ -4,7 +4,7 @@ import Input from '../input/input.vue';
 import {
 	MUTATIONS_SET_HEIGHT,
 	MUTATIONS_SET_WEIGHT
-} from '../../scripts/store';
+} from '../../scripts/store'
 
 export default defineComponent({
 	name: "Calculator",
