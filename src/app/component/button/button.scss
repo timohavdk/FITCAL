@@ -1,0 +1,20 @@
+.button {
+  width: 100%;
+  border: 0;
+  color: #FDFFAE;
+  background-color: #6ced84;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px 4px;
+  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.78));
+  transition: .3s;
+
+  &_active {
+    filter: none;
+  }
+
+  &_hover {
+    filter: drop-shadow(0px 3px 3px #D7D8AD);
+  }
+}

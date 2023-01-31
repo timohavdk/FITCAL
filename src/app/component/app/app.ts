@@ -1,12 +1,12 @@
 import {defineComponent, ref, Ref} from "vue";
+import Calculator from '../calculator/calculator.vue';
 
 export default defineComponent({
-    name: "Main",
+    name: "App",
+	components: {
+		Calculator
+	},
     setup() {
-        const one: Ref<number> = ref(1);
 
-        return {
-            one
-        }
     }
 })
