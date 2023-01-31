@@ -13,17 +13,14 @@ export default defineComponent({
         /**
          * Обработчик нажатия на клавишу
          * */
-        function mouseDownHandler() {
-            isActive.value = true;
-            isHover.value = false;
-        }
+        function clickHandler() {
+            isActive.value = !isActive.value;
+            isHover.value = !isHover.value;
 
-        /**
-         * Обработчик отжатия клавиши
-         * */
-        function mouseUpHandler() {
-            isActive.value = false;
-            isHover.value = true;
+            setTimeout(() => {
+                isActive.value = !isActive.value;
+                isHover.value = !isHover.value;
+            }, 300);
         }
 
         /**
@@ -43,8 +40,7 @@ export default defineComponent({
         return {
             isActive,
             isHover,
-            mouseDownHandler,
-            mouseUpHandler,
+            clickHandler,
             mouseOverHandler,
             mouseLeaveHandler
         }

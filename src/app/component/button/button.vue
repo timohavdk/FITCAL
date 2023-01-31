@@ -8,11 +8,9 @@
       {'button_active': isActive},
       {'button_hover': isHover}
     ]"
-    @mousedown="mouseDownHandler"
-    @mouseup="mouseUpHandler"
-    @mouseover="mouseOverHandler"
-    @mouseleave="mouseLeaveHandler"
+    @click="clickHandler"
+    @pointerover="mouseOverHandler"
+    @pointerleave="mouseLeaveHandler"
   >Calculate</button>
 </template>
-
 
