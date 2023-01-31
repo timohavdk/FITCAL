@@ -1,6 +1,7 @@
 import { defineComponent, ref, Ref } from "vue";
 import { useStore } from 'vuex';
 import Input from '../input/input.vue';
+import Button from "../button/button.vue";
 import {
 	MUTATIONS_SET_HEIGHT,
 	MUTATIONS_SET_WEIGHT
@@ -9,7 +10,8 @@ import {
 export default defineComponent({
 	name: "Calculator",
 	components: {
-		Input
+		Input,
+		Button
 	},
 	setup() {
 		const store = useStore();

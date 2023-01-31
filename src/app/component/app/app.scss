@@ -8,6 +8,10 @@
 		-webkit-appearance: none;
 		margin:0;
 	}
+
+	input:focus, textarea:focus, select:focus {
+		outline: none;
+	}
 }
 
 .app {

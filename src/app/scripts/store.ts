@@ -15,6 +15,12 @@ const Store = createStore({
 		GET_HEIGHT(state) {
 			return state.height
 		},
+		GET_ACCEPT_HEIGHT(state) {
+			return state.height > 0 && state.height < 272;
+		},
+		GET_ACCEPT_WEIGHT(state) {
+			return state.weight > 0 && state.weight < 610;
+		},
 	},
 	mutations: {
 		setHeight(state, height: number) {
