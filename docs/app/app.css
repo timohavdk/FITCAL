@@ -36,6 +36,7 @@
   filter: drop-shadow(0px 0px 2px #FDFFAE);
 }
 .input__input_accepted {
+  box-shadow: none;
   filter: drop-shadow(0px 0px 10px #c1f2ca);
 }
 .input__input_focus::placeholder {

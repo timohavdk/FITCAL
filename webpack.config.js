@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist/')
+            directory: path.resolve(__dirname, 'docs/')
         },
         compress: true,
         port: 1234,
@@ -18,7 +18,7 @@ module.exports = {
     }, // Входная точка для сборки всего проекта (Файл, в котором собираются все модули проекта)
     output: {
         filename: '[name]/[name].js', // Выходной/итоговый файл проекта в зависимости от целей production/development
-        path: path.resolve(__dirname, 'dist'), // Путь к выходному/итоговому файлу
+        path: path.resolve(__dirname, 'docs'), // Путь к выходному/итоговому файлу
         clean: true, // Для очистки директории после пересборки
     },
     plugins: [
