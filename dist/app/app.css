@@ -1,0 +1,133 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/input/input.scss?vue&type=style&index=0&lang=css ***!
+  \***************************************************************************************************************************************************************************************************************/
+.input__label {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+.input__label_light {
+  color: #FDFFAE;
+  -webkit-text-stroke-width: 0.1px;
+}
+.input__label_accepted {
+  color: #c1f2ca;
+}
+.input__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0px 4px 4px #1E3541;
+  max-width: 256px;
+  padding: 8px 4px;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  transition: 0.3s;
+}
+.input__input::placeholder {
+  color: #7d97a5;
+}
+.input__input_light {
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 2px #FDFFAE);
+}
+.input__input_accepted {
+  filter: drop-shadow(0px 0px 10px #c1f2ca);
+}
+.input__input_focus::placeholder {
+  color: transparent;
+}
+.input__message {
+  border-radius: 10px;
+  padding: 8px 4px;
+  margin-bottom: 8px;
+  text-align: center;
+  background-color: #ff7386;
+  color: #fff;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.input__message_show {
+  transform: scale(100%);
+}
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/button/button.scss?vue&type=style&index=0&lang=css ***!
+  \*****************************************************************************************************************************************************************************************************************/
+.button {
+  width: 100%;
+  border: 0;
+  color: #FDFFAE;
+  background-color: #6ced84;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px 4px;
+  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.78));
+  transition: 0.3s;
+}
+.button_active {
+  filter: none;
+}
+.button_hover {
+  filter: drop-shadow(0px 3px 3px #D7D8AD);
+}
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/calculator/calculator.scss?vue&type=style&index=0&lang=css ***!
+  \*************************************************************************************************************************************************************************************************************************/
+.calculator__bar {
+  max-width: 300px;
+  background: #315d75;
+  border-radius: 10px;
+  padding: 30px 22px 34px 22px;
+  transition: 0.3s;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.calculator__title {
+  padding-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-align: center;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/app/app.scss?vue&type=style&index=0&lang=css ***!
+  \***********************************************************************************************************************************************************************************************************/
+* {
+  font-family: Verdana;
+  margin: 0;
+  box-sizing: border-box;
+}
+* input[type=number]::-webkit-inner-spin-button,
+* input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* input:focus, * textarea:focus, * select:focus {
+  outline: none;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: #6ced84;
+}
+.app__title {
+  padding-top: 76px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  color: #ffdc35;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1e3541;
+}
