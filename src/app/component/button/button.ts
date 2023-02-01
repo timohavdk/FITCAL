@@ -15,11 +15,9 @@ export default defineComponent({
          * */
         function clickHandler() {
             isActive.value = !isActive.value;
-            isHover.value = !isHover.value;
 
             setTimeout(() => {
                 isActive.value = !isActive.value;
-                isHover.value = !isHover.value;
             }, 300);
         }
 

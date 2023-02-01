@@ -1,6 +1,9 @@
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/input/input.scss?vue&type=style&index=0&lang=css ***!
   \***************************************************************************************************************************************************************************************************************/
+.input {
+  box-sizing: border-box;
+}
 .input__label {
   display: block;
   color: #fff;
@@ -9,10 +12,12 @@
 }
 .input__label_light {
   color: #FDFFAE;
-  -webkit-text-stroke-width: 0.1px;
 }
 .input__label_accepted {
   color: #c1f2ca;
+}
+.input__label_not-accepted {
+  color: #ff7386;
 }
 .input__input {
   display: block;
@@ -20,12 +25,11 @@
   margin-bottom: 8px;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: inset 0px 4px 4px #1E3541;
   max-width: 256px;
   padding: 8px 4px;
   font-size: 16px;
   text-align: center;
-  border: 0;
+  border: 4px solid #fff;
   transition: 0.3s;
 }
 .input__input::placeholder {
@@ -33,11 +37,15 @@
 }
 .input__input_light {
   box-shadow: none;
-  filter: drop-shadow(0px 0px 2px #FDFFAE);
+  border: 4px solid #FDFFAE;
 }
 .input__input_accepted {
   box-shadow: none;
-  filter: drop-shadow(0px 0px 10px #c1f2ca);
+  border: 4px solid #c1f2ca;
+}
+.input__input_not-accepted {
+  box-shadow: none;
+  border: 4px solid #ff7386;
 }
 .input__input_focus::placeholder {
   color: transparent;
@@ -60,21 +68,23 @@
   \*****************************************************************************************************************************************************************************************************************/
 .button {
   width: 100%;
-  border: 0;
   color: #FDFFAE;
   background-color: #6ced84;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 800;
   padding: 8px 4px;
-  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.78));
+  border: 4px solid #6ced84;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
+}
+.button_hover {
+  background-color: #36FF5C;
 }
 .button_active {
   filter: none;
-}
-.button_hover {
-  filter: drop-shadow(0px 3px 3px #D7D8AD);
+  border: 4px solid #FDFFAE;
+  background-color: #56FF75;
 }
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./src/app/component/calculator/calculator.scss?vue&type=style&index=0&lang=css ***!
