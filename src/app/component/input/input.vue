@@ -7,7 +7,8 @@
       :class="[
         'input__label',
         {'input__label_light': isFocus},
-        {'input__label_accepted': isAccepted}
+        {'input__label_accepted': isAccepted},
+        {'input__label_not-accepted': !isAccepted && value},
       ]"
       :for="id"
     >{{ label }}</label>
@@ -17,7 +18,8 @@
         'input__input',
         {'input__input_light': isFocus || isHover},
         {'input__input_focus': isFocus},
-        {'input__input_accepted': isAccepted}
+        {'input__input_accepted': isAccepted},
+        {'input__input_not-accepted': !isAccepted && value},
       ]"
       :id="id"
       :placeholder="placeholder"
