@@ -122,14 +122,16 @@
 * input:focus, * textarea:focus, * select:focus {
   outline: none;
 }
+body {
+  background-color: #6ced84;
+}
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100%;
   margin: 0;
   background: #6ced84;
+  height: 100vh;
 }
 .app__title {
   padding-top: 76px;
@@ -141,4 +143,7 @@
   color: #ffdc35;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #1e3541;
+}
+.app__calculator {
+  padding-bottom: 20px;
 }

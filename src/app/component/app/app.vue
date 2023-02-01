@@ -4,6 +4,6 @@
 <template>
   <div class="app">
 		<h1 class="app__title">FITCAL</h1>
-		<Calculator/>
+		<Calculator class="app__calculator"/>
 	</div>
 </template>
