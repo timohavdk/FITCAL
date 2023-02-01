@@ -1,4 +1,4 @@
-.calculator {
+.result {
 	&__bar {
 		max-width:     300px;
 		background:    #315d75;
@@ -18,11 +18,17 @@
 		text-align:     center;
 	}
 
-	&__input {
-		margin-bottom: 16px;
+	&__result {
+		text-align: center;
+		color: #fff;
+		font-size: 36px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
 
-		&:nth-last-child(1) {
-			margin-bottom: 24px;
-		}
+	&__description {
+		color: #fff;
+		margin-bottom: 24px;
 	}
 }
+

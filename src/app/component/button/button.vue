@@ -11,6 +11,13 @@
     @click="clickHandler"
     @pointerover="mouseOverHandler"
     @pointerleave="mouseLeaveHandler"
-  >Calculate</button>
+  >{{ title }}</button>
+	<div
+		:class="[
+        'button__message',
+        {'button__message_show': isShowingError}
+       ]"
+		v-if="isErrorShow"
+	>{{ errorMessage }}</div>
 </template>
 
