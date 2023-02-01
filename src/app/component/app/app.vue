@@ -4,6 +4,16 @@
 <template>
   <div class="app">
 		<h1 class="app__title">FITCAL</h1>
-		<Calculator class="app__calculator"/>
+		<Calculator
+			class="app__calculator"
+			@calculateResult="calculateHandler"
+			v-if="showWindow === CALCULATOR"
+		/>
+		<Result
+			class="app__result"
+			v-if="showWindow === RESULT"
+		/>
 	</div>
-</template>
+</template> <!--
+
+-->

@@ -12,6 +12,7 @@
         :mode="'weight'"
         :is-accepted="this.$store.getters.GET_ACCEPT_WEIGHT"
 				@setValue="setWeight"
+				class="calculator__input"
 			/>
 			<Input
 				:id="'height'"
@@ -20,8 +21,14 @@
         :mode="'height'"
         :is-accepted="this.$store.getters.GET_ACCEPT_HEIGHT"
 				@setValue="setHeight"
+				class="calculator__input"
 			/>
-      <Button />
+      <Button
+				:title="'Calculate'"
+				:errorMessage="ERROR_MESSAGE"
+				:isErrorShow="isErrorShow"
+				@clickOnButton="clickHandler"
+			/>
 		</div>
 	</div>
 </template>

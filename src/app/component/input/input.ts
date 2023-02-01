@@ -63,10 +63,6 @@ export default defineComponent({
 		 * */
 		function blurHandler() {
 			isFocus.value = false;
-			console.log('condition r', null === this.$refs.input.value)
-			console.log('condition v', null === value.value);
-			console.log('value v', value.value, typeof value.value);
-			console.log('value ref', this.$refs.input.value, typeof value.value);
 
 			if (null === value.value) {
 
