@@ -6,13 +6,13 @@
 		<h1 class="app__title">FITCAL</h1>
 		<Calculator
 			class="app__calculator"
-			@calculateResult="calculateHandler"
-			v-if="showWindow === CALCULATOR"
+			v-if="showWindow === PanelEnums.CALCULATOR"
 		/>
 		<Result
 			class="app__result"
-			v-if="showWindow === RESULT"
+			v-if="showWindow === PanelEnums.RESULT"
 		/>
+		<Description/>
 	</div>
 </template> <!--
 

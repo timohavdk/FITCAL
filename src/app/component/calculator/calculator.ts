@@ -5,8 +5,10 @@ import Button from "../button/button.vue";
 import {
 	ACTION_GET_BODY_WEIGHT_INDEX,
 	MUTATIONS_SET_HEIGHT,
-	MUTATIONS_SET_WEIGHT
+	MUTATIONS_SET_WEIGHT,
+	MUTATIONS_SET_PANEL
 } from '../../scripts/store'
+import {PanelEnums} from '../../scripts/models/panel-enums';
 
 export default defineComponent({
 	name: "Calculator",
@@ -36,7 +38,7 @@ export default defineComponent({
 			if (store.getters.GET_ACCEPT_HEIGHT && store.getters.GET_ACCEPT_WEIGHT) {
 				store.dispatch(ACTION_GET_BODY_WEIGHT_INDEX);
 				isErrorShow.value = false;
-				emit('calculate-result');
+				store.commit(MUTATIONS_SET_PANEL, PanelEnums.RESULT);
 
 				return;
 			}

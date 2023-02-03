@@ -1,6 +1,7 @@
 import {createStore} from 'vuex';
 import StateDto from './models/state-dto';
 import LimitWeightDto from './models/limit-weight-dto';
+import {PanelEnums} from './models/panel-enums';
 
 const Store = createStore({
 	state(): StateDto {
@@ -17,6 +18,7 @@ const Store = createStore({
 				[new LimitWeightDto(34.9, 39.9), 'Obesity class II – BMI 35 to 39.9 kg/m^2'],
 				[new LimitWeightDto(39.9, 1000), 'Obesity class III – BMI greater than or equal to 40 kg/m^2 (also referred to as severe, extreme, or massive obesity)'],
 			]),
+			panelShown: PanelEnums.CALCULATOR,
 		}
 	},
 	getters:   {
@@ -46,6 +48,9 @@ const Store = createStore({
 		GET_ACCEPT_WEIGHT(state) {
 			return state.weight > 0 && state.weight < 610;
 		},
+		GET_PANEL(state) {
+			return state.panelShown;
+		}
 	},
 	mutations: {
 		setHeight(state, height: number) {
@@ -53,6 +58,9 @@ const Store = createStore({
 		},
 		setWeight(state, weight: number) {
 			state.weight = weight;
+		},
+		setPanel(state, panel: string) {
+			state.panelShown = panel;
 		}
 	},
 	actions:   {
@@ -71,7 +79,8 @@ export default Store;
 export const MUTATIONS_SET_HEIGHT = 'setHeight';
 /** Mutations - установка веса */
 export const MUTATIONS_SET_WEIGHT = 'setWeight';
-
+/** Mutations - установка отображаемой панели */
+export const MUTATIONS_SET_PANEL = 'setPanel';
 
 /** Action - рассчёт индекса массы тела */
 export const ACTION_GET_BODY_WEIGHT_INDEX = 'getBodyWeightIndex';

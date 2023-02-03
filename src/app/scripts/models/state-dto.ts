@@ -12,4 +12,7 @@ export default class StateDto {
 
 	/** Описания индекса масс тела */
 	description: Map<LimitWeightDto, string>;
+
+	/** Какая панель показыватеся */
+	panelShown: string;
 }
