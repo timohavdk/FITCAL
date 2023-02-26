@@ -3,20 +3,17 @@ import {ButtonIconsEnums} from './enums/button-icons-enums';
 
 export default defineComponent({
 	name: "Description",
-	setup() {
+	setup: function () {
 		/** Показывается ли описание */
-		const isShown: Ref<boolean> = ref(false);
+		const isShown = ref<boolean>(false);
 
 		/** Показывается ли панель описания */
-		const isPanelShown: Ref<boolean> = ref(false);
+		const isPanelShown = ref<boolean>(false);
 
 		/** Значение иконки для кнопки*/
-		const buttonIcon = computed({
-			get() {
-				return isShown.value ? ButtonIconsEnums.ARROW : ButtonIconsEnums.QUESTIONS;
-			},
-			set() {}
-		})
+		const buttonIcon = computed<string>(() => {
+			return isShown.value ? ButtonIconsEnums.ARROW : ButtonIconsEnums.QUESTIONS;
+		});
 
 		/** Обработчик нажатия на кнопку */
 		function clickHandler() {
