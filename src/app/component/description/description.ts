@@ -27,6 +27,7 @@ export default defineComponent({
 				isShown.value = true;
 				setTimeout(() => {
 					isPanelShown.value = true;
+					console.log('revert-5')
 				}, 100)
 			}
 		}
