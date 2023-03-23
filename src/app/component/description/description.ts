@@ -22,6 +22,7 @@ export default defineComponent({
 				setTimeout(() => {
 					isShown.value = false;
 				}, 100)
+
 			}
 			else {
 				isShown.value = true;
