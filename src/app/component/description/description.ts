@@ -21,7 +21,6 @@ export default defineComponent({
 				isPanelShown.value = false;
 				setTimeout(() => {
 					isShown.value = false;
-					console.log('2323');
 				}, 100)
 			}
 			else {
