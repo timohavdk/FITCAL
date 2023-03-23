@@ -21,6 +21,7 @@ export default defineComponent({
 				isPanelShown.value = false;
 				setTimeout(() => {
 					isShown.value = false;
+					console.log('revert 2');
 				}, 100)
 			}
 			else {
