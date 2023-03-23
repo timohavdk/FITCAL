@@ -23,6 +23,7 @@ export default defineComponent({
 					isShown.value = false;
 					console.log('revert 2');
 				}, 100)
+
 			}
 			else {
 				isShown.value = true;
