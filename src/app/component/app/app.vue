@@ -4,6 +4,8 @@
 <template>
   <div class="app">
 		<h1 class="app__title">Apps Info</h1>
+        <p class="app__info">{{ JSON.stringify(appsInfo) }}</p>
+        <p class="app__info">{{ appsInfo.length }}</p>
         <p class="app__info">{{ appsInfo }}</p>
 		<!-- <Calculator
 			class="app__calculator"

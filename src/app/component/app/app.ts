@@ -13,11 +13,11 @@ export default defineComponent({
 	// 	Description
 	},
     setup() {
-        const appsInfo = ref<string>('');
+        const appsInfo = ref<Array<any>>([]);
 
         onMounted( async () => {
             const result = await (<any>navigator).getInstalledRelatedApps();
-            appsInfo.value = JSON.stringify(result);
+            appsInfo.value = result;
             console.log('Apps info', appsInfo.value);
         })
 		// const store = useStore();
