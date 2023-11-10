@@ -3,8 +3,9 @@
 
 <template>
   <div class="app">
-		<h1 class="app__title">FITCAL</h1>
-		<Calculator
+		<h1 class="app__title">Apps Info</h1>
+        <p class="app__info">{{ appsInfo }}</p>
+		<!-- <Calculator
 			class="app__calculator"
 			v-if="showWindow === PanelEnums.CALCULATOR"
 		/>
@@ -12,7 +13,7 @@
 			class="app__result"
 			v-if="showWindow === PanelEnums.RESULT"
 		/>
-		<Description/>
+		<Description/> -->
 	</div>
 </template> <!--
 
